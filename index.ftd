@@ -1,65 +1,77 @@
--- string main: #fff
--- string primary: #F79489
--- string primary-500: #F8AFA6
--- string primary-300: #FADCD9
--- string primary-100: #F9F1F0
--- string accent: #0D1F2D
--- string error: c
--- string informational: c
--- string warning: c
--- string success: c
--- string secondary-100: c
--- string secondary-300: c
--- string secondary-400: c
--- string secondary-500: c
--- string secondary-700: c
--- string secondary-700: #4C555A
--- string secondary-900: #384248
--- string separator: #string
+
+
+
 -- record toc:
 caption title:
 string link:
 
+-- ftd.row banner:
+background-color: #5E7CEC
+width: fill
+padding-vertical: 20
+padding-horizontal: 100
+
 
 -- ftd.text header-link:
+optional string color: black
 toc toc:
 size: 14
-color: black
+color: $color
 text: $toc.title
 link:  $toc.link
 min-width: fit-content
 
 
 -- ftd.row header:
-string title:
-integer padding-horizontal:
-integer padding-vertical:
 optional string link: \
+string logo:
 toc list toc:
 width: fill
 background-color: white
-border-color: #eaecee
+border-color: #D4D4D4
 border-bottom: 1
 
 
 --- ftd.row:
 width: fill
-padding-horizontal: $padding-horizontal
-padding-vertical: $padding-vertical
+padding-horizontal: 100
+padding-vertical: 20
 
---- ftd.text: $title
-size: 22
-color: black
+--- ftd.image:
+src: $logo
+width: 160
+height: auto
 link: $link
-padding-right: 50
+
 
 --- ftd.row:
-align: left
-spacing: 30
+align: right
+spacing: 40
 
 --- header-link:
 $loop$: $toc as $obj
 toc: $obj
+color: #595959
+
+-- ftd.column welcome-section:
+caption title:
+body body:
+background-color: #F5F7FF
+width: fill
+padding-vertical: 50
+padding-horizontal: 100
+spacing: 20
+
+--- ftd.text: $title
+size: 40
+color: #595959
+
+--- ftd.text: $body
+size: 16
+line-height: 24
+width: 650
+style: light
+color: #4A4A4A
 
 
 -- ftd.row links-list:
@@ -91,7 +103,7 @@ optional boolean two_columns:
 text: $body
 size: 15
 line-height: 24
-color: $secondary-700
+color:  #4C555A
 padding-bottom: 8
 
 
@@ -378,33 +390,38 @@ body description:
 optional string label: Navigation
 toc list links:
 optional string copyright:
-optional integer padding-horizontal: 130
-optional integer padding-vertical: 19
-background-color: #fff
-padding-horizontal: $padding-horizontal
-padding-vertical : $padding-vertical
+optional string link: \
+string logo:
+background-color: #262626
+padding-horizontal: 100
+padding-vertical :  20
 width: fill
 
 --- ftd.row:
 padding-vertical: 20
-border-color: #eaecee
+border-color: #484848
 border-bottom: 1
 width: fill
 id: footer-links
 spacing: 50
 
+
 --- ftd.column:
 width: percent 30
 align: left
 
---- ftd.text: $title
-padding-bottom: 10
-size: 16
+--- ftd.image:
+src: $logo
+width: 160
+height: auto
+link: $link
 
 --- ftd.text:
 text:  $description
 padding-bottom: 20
+padding-top: 20
 size: 14
+color: white
 
 --- container: footer-links
 
@@ -416,10 +433,12 @@ spacing: 14
 --- ftd.text: Navigation
 padding-bottom: 10
 size: 16
+color: white
 
 --- header-link:
 $loop$: $links as $obj
 toc: $obj
+color: white
 
 --- container: ftd.main
 
@@ -430,47 +449,54 @@ size: 13
 padding-vertical: 20
 text-align: center
 width: fill
+color: white
 
 
 -- ftd.column blog-card:
 string image:
 caption title:
-string sub-title:
+body sub-title:
 string link:
 string date:
-width: fill
-border-radius: 4
-border-color: #eaecee
-border-width: 1
+string author:
+width: percent 45
 link: $link
-background-color: white
-overflow-x: hidden
-overflow-y: hidden
 
 
 --- ftd.image:
 src: $image
 width: fill
+border-radius: 2
 
 --- ftd.column:
 padding-vertical: 30
 padding-horizontal: 20
 
 --- ftd.text: $title
-size: 32
-line-height: 44
-color: #000c2d
+size: 24
+line-height: 32
+color: #595959
 
 --- ftd.text: $sub-title
-size: 16
-line-height: 24
-padding-vertical: 16
-border-color: #eaecee
-border-bottom: 1
-color: #000c2d
+size: 15
+line-height: 22
+padding-vertical: 10
+color: #3A3A3A
+
+--- ftd.row:
+spacing: 4
 
 --- ftd.text: $date
 size: 14
-padding-top: 16
 line-height: 24
-color: #000c2d
+color: #9D9D9D
+
+--- ftd.text:  By
+size: 14
+line-height: 24
+color: #9D9D9D
+
+--- ftd.text: $author
+size: 14
+line-height: 24
+color: #9D9D9D
