@@ -39,7 +39,7 @@ string link:
 -- ftd.column index-page:
 width: fill
 open: content-container
-background-color if $dark-mode:$neutral-700
+background-color if $ftd.dark-mode:$neutral-700
 
 --- header:
 logo: $site-logo
@@ -62,7 +62,7 @@ id: content-container
 -- ftd.column blog-page:
 width: fill
 open: content-container2
-background-color if $dark-mode: $neutral-700
+background-color if $ftd.dark-mode: $neutral-700
 
 --- header:
 logo:  $site-logo
@@ -93,7 +93,7 @@ padding-horizontal if $mobile: 15
 padding-vertical: 30
 width: fill
 background-color: $neutral-300
-background-color if $dark-mode: $neutral-500
+background-color if $ftd.dark-mode: $neutral-500
 
 
 
@@ -107,12 +107,12 @@ position: left
 size: 30
 style: medium
 color: $neutral-800
-color if $dark-mode: $neutral
+color if $ftd.dark-mode: $neutral
 
 --- ftd.text: $bio
 size: 16
 color: $neutral-800
-color if $dark-mode: $neutral
+color if $ftd.dark-mode: $neutral
 
 --- container: ftd.main
 
@@ -133,9 +133,9 @@ string logo:
 string logo-dark:
 width: fill
 background-color: $neutral
-background-color if $dark-mode: $neutral-700
+background-color if $ftd.dark-mode: $neutral-700
 border-color : #D4D4D4
-border-color if $dark-mode: $neutral-500
+border-color if $ftd.dark-mode: $neutral-500
 border-bottom: 1
 
 
@@ -146,7 +146,7 @@ padding-horizontal if $mobile: 15
 padding-vertical: 20
 
 --- ftd.image:
-if: not $dark-mode
+if: not $ftd.dark-mode
 src: $logo
 height: auto
 width: 140
@@ -154,7 +154,7 @@ width if $mobile: 110
 link: /
 
 --- ftd.image:
-if:  $dark-mode
+if:  $ftd.dark-mode
 src: $logo-dark
 height: auto
 width: 140
@@ -180,7 +180,7 @@ position: right
 size: 14
 style: light
 color: $neutral-800
-color if $dark-mode: $neutral
+color if $ftd.dark-mode: $neutral
 padding-right: 20
 
 --- ftd.image:
@@ -222,7 +222,7 @@ link: $reddit
 src: https://res.cloudinary.com/dphj6havg/image/upload/v1640162431/moon_gmh2cd.png
 height: 20
 width: auto
-$event-click$: toggle $dark-mode
+$event-click$: toggle $ftd.dark-mode
 
 
 -- ftd.column welcome-section:
@@ -259,7 +259,7 @@ text: $body
 size: 18
 line-height: 24
 color:  $neutral-800
-color if $dark-mode: $neutral
+color if $ftd.dark-mode: $neutral
 padding-bottom: 8
 
 
@@ -269,7 +269,7 @@ optional boolean collapsed:
 optional caption title:
 optional boolean two_columns:
 color:  $neutral-800
-color if $dark-mode: $neutral-200
+color if $ftd.dark-mode: $neutral-200
 text: $body
 size: 18
 line-height: 24
@@ -289,7 +289,7 @@ region: title
 size: 48
 line-height: 64
 color: $color
-color if $dark-mode: $neutral
+color if $ftd.dark-mode: $neutral
 style: bold
 padding-bottom: 8
 padding-top: 0
@@ -315,7 +315,7 @@ text: $title
 size: 36
 line-height: 40
 color: $neutral-800
-color if $dark-mode: $neutral
+color if $ftd.dark-mode: $neutral
 style: bold
 padding-bottom: 8
 padding-top: 16
@@ -339,7 +339,7 @@ text: $title
 size: 28
 line-height: 34
 color: $neutral-800
-color if $dark-mode: $neutral
+color if $ftd.dark-mode: $neutral
 style: bold
 padding-bottom: 8
 padding-top: 16
@@ -363,7 +363,7 @@ text: $title
 size: 22
 line-height: 30
 color: $neutral-800
-color if $dark-mode: $neutral
+color if $ftd.dark-mode: $neutral
 style: bold
 padding-bottom: 8
 padding-top: 16
@@ -385,7 +385,7 @@ text: $title
 size: 19
 line-height: 26
 color:  $neutral-800
-color if $dark-mode: $neutral
+color if $ftd.dark-mode: $neutral
 style: bold
 padding-bottom: 8
 padding-top: 16
@@ -413,7 +413,7 @@ text: $title
 size: 24
 line-height: 24
 color: $neutral-800
-color if $dark-mode: $neutral
+color if $ftd.dark-mode: $neutral
 style: semi-bold
 padding-bottom: 8
 padding-top: 16
@@ -606,7 +606,7 @@ width: fill
 --- ftd.row:
 padding-vertical: 20
 border-color: $neutral-400
-border-color if $dark-mode:$neutral-600
+border-color if $ftd.dark-mode:$neutral-600
 border-top: 1
 width: fill
 id: footer-links
@@ -620,7 +620,7 @@ padding-vertical: 20
 text-align: center
 width: fill
 color: $neutral-800
-color if $dark-mode: $neutral
+color if $ftd.dark-mode: $neutral
 
 
 -- ftd.column post-summary:
@@ -651,7 +651,7 @@ size: 32
 line-height: 40
 style: medium
 color: #595959
-color if $dark-mode: $neutral
+color if $ftd.dark-mode: $neutral
 font: Inter
 padding-top: 20
 link: $link
@@ -660,14 +660,14 @@ link: $link
 size: 14
 line-height: 24
 color: #9D9D9D
-color if $dark-mode: $neutral
+color if $ftd.dark-mode: $neutral
 font: Inter
 
 --- ftd.text: $body
 size: 16
 line-height: 24
 color: #3A3A3A
-color if $dark-mode: $neutral-200
+color if $ftd.dark-mode: $neutral-200
 font: Inter
 
 
