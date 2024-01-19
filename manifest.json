@@ -1,0 +1,26 @@
+{
+  "files": {
+    "FASTN.ftd": {
+      "name": "FASTN.ftd",
+      "checksum": "BD58219F0903FDBCC60236AF0D21A8E1770434B9804D67521B3F4C30673CE140",
+      "size": 130
+    },
+    "LICENSE": {
+      "name": "LICENSE",
+      "checksum": "5B8B83357C092AC57F28508D18CAB65E4965AAA3BA61226DE038719E022638C1",
+      "size": 1516
+    },
+    "README.md": {
+      "name": "README.md",
+      "checksum": "D655F4C602DAB53D05893B72942AFCD7E1BF01C29817C5728936A9CF435E2D6F",
+      "size": 28
+    },
+    "index.ftd": {
+      "name": "index.ftd",
+      "checksum": "5950540F54EA0D66C9296F58069E634B7D7B2834115ABE7AC60D08205C7DDC44",
+      "size": 11501
+    }
+  },
+  "zip_url": "github.com/fifthtry/blog-theme/archive/refs/heads/main.zip",
+  "checksum": "6C940443EB28007D7A9C8DF067DA985CDF46F71CC3DC24FF91F9A22FD15FA6CE"
+}
